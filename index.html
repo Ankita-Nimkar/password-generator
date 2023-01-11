@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate a <span class="green"> random password</span></h1>
+      <h4>Never use an insecure password again.</h4>
+      <button class="generatePassword" onclick="generatePassword()">
+        Generate passwords
+      </button>
+      <select name="password-select" id="password-select">
+        <option value="16">--Please set password length--</option>
+        <option value="18">18 characters</option>
+        <option value="20">20 characters</option>
+        <option value="22">22 characters</option>
+      </select>
+      <button class="newPassword" onclick="newPassword()">New passwords</button>
+
+      <hr />
+      <div class="display-flex">
+        <input
+          type="text"
+          value=""
+          class="display password1"
+          onclick="copy()"
+        />
+        <input
+          type="text"
+          value=""
+          class="display password2"
+          onclick="copy()"
+        />
+      </div>
+      <button class="toggleSymbols" onclick="toggleSymbols()">
+        toggle symbol
+      </button>
+      <button class="toggleNumbers" onclick="toggleNumbers()">
+        toggle numbers
+      </button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
